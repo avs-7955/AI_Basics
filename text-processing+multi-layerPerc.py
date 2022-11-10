@@ -43,11 +43,11 @@ print('Accuracy Score on test data: ', accuracy_score(
     y_true=y_test, y_pred=y_pred)*100)
 
 # Input 01
-input1 = ["Worst support. It needs more improvement."]
-print(f"Input 01: {input1[0]}")
-print(model.predict(input1.reshape(1, -1)))
+input1 = x_test[-1].reshape(1, -1)
+print(input1)
+print(model.predict(input1))
 
 # Input 02
-input2 = ["Its working not nicely."]
-print(f"Input 02: {input2[0]}")
-print(model.predict(input2.reshape(1, -1)))
+input2 = x_test[-2].reshape(1, -1)
+print(input2)
+print(model.predict(input2))
