@@ -21,8 +21,8 @@ data = prepocess_data(data)
 x = data['Sentence']
 y = data['Sentiment']
 
-le = LabelEncoder()
-y = le.fit_transform(y)
+# le = LabelEncoder()
+# y = le.fit_transform(y)
 
 vect = CountVectorizer(stop_words='english')
 x = vect.fit_transform(x).toarray()
@@ -44,10 +44,8 @@ print('Accuracy Score on test data: ', accuracy_score(
 
 # Input 01
 input1 = x_test[-1].reshape(1, -1)
-print(input1)
 print(model.predict(input1))
 
 # Input 02
 input2 = x_test[-2].reshape(1, -1)
-print(input2)
 print(model.predict(input2))
